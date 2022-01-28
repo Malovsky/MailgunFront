@@ -18,7 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // 2) On envoie les datas au serveur
       // Ici je met la réponse dans une constante pour pouvoir effectuer une action après
-      const response = await axios.post("http://localhost:3000/form", data);
+      const response = await axios.post(
+        "https://mailguntestback.herokuapp.com/form",
+        data
+      );
       console.log(response);
     });
 });
