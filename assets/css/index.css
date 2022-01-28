@@ -58,6 +58,10 @@ form {
   color: white;
 }
 
+#submit:hover {
+  cursor: pointer;
+}
+
 .hidden {
   display: none;
 }

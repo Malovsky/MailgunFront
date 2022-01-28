@@ -22,6 +22,19 @@ document.addEventListener("DOMContentLoaded", () => {
         "https://mailguntestback.herokuapp.com/form",
         data
       );
+
+      if (response.data) {
+        document.getElementById("pass").classList.remove("hidden");
+        document.getElementById("nopass").classList.add("hidden");
+        document.getElementById("firstName").value = "";
+        document.getElementById("lastName").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("sujet").value = "";
+        document.getElementById("message").value = "";
+      } else {
+        document.getElementById("nopass").classList.remove("hidden");
+        document.getElementById("pass").classList.add("hidden");
+      }
       console.log(response);
     });
 });
